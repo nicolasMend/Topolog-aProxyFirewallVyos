@@ -1,6 +1,6 @@
-# Título del Proyecto
+# Proxy Firewall con Vyos
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Este proyecto veremos la configuracion de un proxy firewall con Vyos
 
 ## Comenzando 🚀
 
