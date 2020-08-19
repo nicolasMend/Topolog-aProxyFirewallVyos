@@ -2,40 +2,20 @@
 
 Este proyecto busca realizar la implementación de diferentes sistemas operativos, tanto para uso como dispositivos de borde, como para uso de usuarios finales, se pretende implementar un toplogia que haga uso del Firewall
 
-## Vyos 🚀
+## Sistemas usados 🚀
+Para la simulación de nuestra topología, se implementaron los siguientes sistemas operativos en el programa virtualbox:
+
+###  Vyos
+
 VyOS es un sistema operativo de red basado en Linux que proporciona enrutamiento de red basado en software, firewall y funcionalidad VPN. En esta oportunidad lo utilizaremos como enrutador y como firewall para una red, además se establecerá un webproxy para limitar los contenidos que pueden consultar los usuarios finales.
 
+### Antix
 
+Es una distribución de Linux construida directamente sobre Debian. Es comparativamente liviano y adecuado para computadoras más antiguas, al mismo tiempo que proporciona kernel y aplicaciones de vanguardia, así como actualizaciones y adiciones a través del sistema de paquetes apt-get y repositorios compatibles con Debian.
 
-### Pre-requisitos 📋
+### Lubuntu
 
-_Que cosas necesitas para instalar el software y como instalarlas_
-
-```
-Da un ejemplo
-```
-
-### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+Es una distribución Linux ligera, basada en Ubuntu, que emplea el entorno de escritorio LXQt en lugar del entorno GNOME de Ubuntu.
 
 ### Analice las pruebas end-to-end 🔩
 
