@@ -40,6 +40,13 @@ El VyOS2 será el encargado de manejar el webproxy que se aplica a la red 192.16
 
 En el apartado de la DMZ configuramos un servidor web permitiendo las conexiones tanto desde la red interna como de la externa , mientras que las conexiones que parten de la DMZ solo puedan salir a la red interna.
 
+La configuración completa de estos dispositivos se puede encontrar en [comandosConsola](comandosConsola)
+
+## Firewall
+
+En línea de comandos podemos aceptar, soltar y rechazar paquetes de diferentes protocolos, además de especificar el tipo de tráfico que se requiere gestionar, teniendo tráfico LOCAL, IN y OUT; los cuales especifican el tráfico dentro del sistema VyOS, tráfico entrante y saliente.
+
+
 ## Autores ✒️
 
 * **Nicolas Mendigaño** 
