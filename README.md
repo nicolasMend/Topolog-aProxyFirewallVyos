@@ -17,7 +17,7 @@ Es una distribución de Linux construida directamente sobre Debian. Es comparati
 
 Es una distribución Linux ligera, basada en Ubuntu, que emplea el entorno de escritorio LXQt en lugar del entorno GNOME de Ubuntu.
 
-## Implementacion
+## Implementacion 🖇️
 En esta ocasión pretendemos hacer una implementación de:
 * Webproxy
 * Firewall
