@@ -55,9 +55,7 @@ En línea de comandos podemos aceptar, soltar y rechazar paquetes de diferentes 
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [Vyos](https://www.vyos.io//) - 
-* [VM Virtualbox](https://www.virtualbox.org/) - 
-* [GNS3](https://www.gns3.com/) - 
+* [Vyos](https://www.vyos.io//)
+* [VM Virtualbox](https://www.virtualbox.org/)
+* [GNS3](https://www.gns3.com/)
 
