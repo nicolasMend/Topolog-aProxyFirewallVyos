@@ -26,6 +26,7 @@ En esta ocasión pretendemos hacer una implementación de:
 * Servidor WEB
 
 Para ello utilizamos la siguiente topologia basica:
+![Screenshot](Topologia.PNG)
 
 ### Conexión a la red LAN:
 
