@@ -18,13 +18,18 @@ Es una distribución de Linux construida directamente sobre Debian. Es comparati
 Es una distribución Linux ligera, basada en Ubuntu, que emplea el entorno de escritorio LXQt en lugar del entorno GNOME de Ubuntu.
 
 ## Implementacion
-_En esta ocasión pretendemos hacer una implementación de:_
+En esta ocasión pretendemos hacer una implementación de:
 * Webproxy
 * Firewall
 * DMZ
 * Acceso SSH
 * Servidor WEB
-_Para ello utilizamos la siguiente topologia basica:_
+
+Para ello utilizamos la siguiente topologia basica:
+
+### Conexión a la red LAN:
+
+Para poder probar el funcionamiento del webproxy se requiere la conexión a internet en este caso, se habilita una red compartida con un adaptador de bucle invertido el cual llamaremos  loopback,  se habilita en la topología de GNS3,  después se coloca una primera VM con VyOS, que maneja la conexión a internet y que llevará la regla nat  que comunicara la red LAN con la WAN.  
 
 
 ### Y las pruebas de estilo de codificación ⌨️
