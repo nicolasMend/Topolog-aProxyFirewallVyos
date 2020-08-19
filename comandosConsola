@@ -40,22 +40,22 @@ set service dns forwarding name-server '8.8.8.8'
 set service dns forwarding name-server '8.8.4.4'
 
 //Configuración basada en https://gist.github.com/shafiqsaaidin/4f25d94eb9d6a14771e17fcaf47a7572
-8) Local Firewall Rules
-    * State Policy (accept established,related; drop invalid)
+Reglas locales del firewall
+    * Politica de estados (accept established,related; drop invalid)
     * Accept ICMP echo-request (ping)
     * Accept DHCP request
     * Accept DNS requests
-    * Limit SSH connections to 3 per minute per IP address and accept SSH from management networks
-    * Accept SNMP from management networks
+    * Se limitan las conexiones SSH a 3 minutos por dirección IP por la gestión de red
+    * Aceptar SNMP de gestión de redes
 
-    - Create group objects:
+    - Creando grupos de red:
         set firewall group network-group NET-DMZ network '192.168.3.0/24'
         set firewall group network-group NET-LAN network '192.168.2.0/24'
         set firewall group network-group NET-MANAGEMENT network '192.168.2.2/32'
         set firewall group network-group NET-MANAGEMENT network '192.168.2.3/32'
         set firewall group network-group NET-WAN network '192.168.137.0/24'
 
-    - Create a named local policy for each interface:
+    - Creando nombre local de las politicas para cada interfaz:
             
         set firewall name WAN-LOCAL default-action 'drop'
         set firewall name WAN-LOCAL rule 1010 action 'accept'
@@ -152,8 +152,8 @@ set service dns forwarding name-server '8.8.4.4'
         set interfaces ethernet eth1 firewall local name 'LAN-LOCAL'
         set interfaces ethernet eth2 firewall local name 'DMZ-LOCAL'
 
-9) Filter traffic between networks
-    - Create the default "incoming" policy
+9) Filtrado del trafico entre redes
+    - Creando por defecto la "incomming" de la politica
 
         set firewall name DMZ-IN default-action 'drop'
         set firewall name DMZ-IN rule 1010 action 'accept'
@@ -165,12 +165,12 @@ set service dns forwarding name-server '8.8.4.4'
         set firewall name DMZ-IN rule 9000 source group network-group 'NET-DMZ'
         set firewall name DMZ-IN rule 9000 state new 'enable'
 
-    - Apply these policies to their interfaces:
+    - Aplicar esas politicas para esas interfaces:
         set interfaces ethernet eth2 firewall in name 'DMZ-IN'
     
     ====================================================================================
 
-    - create the “outgoing” policy for the LAN and DMZ
+    - Crear la politica “outgoing” para la LAN y DMZ
         set firewall name LAN-OUT default-action 'drop'
         set firewall name LAN-OUT rule 1010 action 'accept'
         set firewall name LAN-OUT rule 1010 state established 'enable'
@@ -182,19 +182,19 @@ set service dns forwarding name-server '8.8.4.4'
         set firewall name LAN-OUT rule 1020 protocol 'icmp'
         set firewall name LAN-OUT rule 1020 state new 'enable'
 
-    - apply these to their interfaces:
+    - Aplicar a las interfaces:
         set interfaces ethernet eth1 firewall out name 'LAN-OUT
 
 
-10) Enable logging
-    - log configuration changes
+10) Habilitar el loging
+    - Cambios log de la configuración
         set firewall config-trap 'enable'
 
-    - log traffic that reaches the default rule of a named policy (in our case the default drop)
+    - Trafico log que alcanca por defecto una politica nombrada (en este caso por defecto drop)
         set firewall name LAN-OUT 'enable-default-log'
         set firewall name DMZ-IN 'enable-default-log'
 
-11) Enable global configuration default
+11) Habilitar configuraciones globales por defecto
     set firewall all-ping 'enable'
     set firewall broadcast-ping 'disable'
     set firewall ip-src-route 'disable'
