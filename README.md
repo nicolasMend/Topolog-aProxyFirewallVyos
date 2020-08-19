@@ -28,8 +28,7 @@ En esta ocasión pretendemos hacer una implementación de:
 Para ello utilizamos la siguiente topologia basica:
 
 <p align="center">
-  <img src="your_relative_path_here" width="700" title="hover text">
-  <img src="Topologia.PNG" width="400" alt="accessibility text">
+  <img src="Topologia.PNG" width="500" alt="accessibility text">
 </p>
 
 ### Conexión a la red LAN:
