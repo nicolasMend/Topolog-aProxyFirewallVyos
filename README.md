@@ -31,9 +31,15 @@ Para ello utilizamos la siguiente topologia basica:
   <img src="Topologia.PNG" width="500" alt="accessibility text">
 </p>
 
-### Conexión a la red LAN:
+Teniendo en cuenta esta topología procedemos a realizar la configuración del VyOS1 que será el encargado además del firewall y de la conexión a internet.
 
-Para poder probar el funcionamiento del webproxy se requiere la conexión a internet en este caso, se habilita una red compartida con un adaptador de bucle invertido el cual llamaremos  loopback,  se habilita en la topología de GNS3,  después se coloca una primera VM con VyOS, que maneja la conexión a internet y que llevará la regla nat  que comunicara la red LAN con la WAN.  
+Para poder probar el funcionamiento del webproxy se requiere la conexión a internet en este caso, se habilita una red compartida con un adaptador de bucle invertido el cual llamaremos  loopback,  se habilita en la topología de GNS3,  después se coloca una primera VM con VyOS1, que maneja la conexión a internet y que llevará la regla nat  que comunicara la red LAN con la WAN.   
+
+Para la conexión WAN se configura DHCP y se asigna una red a las demás interfaces del dispositivo, luego hacemos un enrutamiento estático para que se pueda dar la comunicación.
+El VyOS2 será el encargado de manejar el webproxy que se aplica a la red 192.168.2.0 limitando el contenido que se puede navegar en los computadores de dicha red, también se configura un DHCP para generar los dispositivos de esta red.
+
+En el apartado de la DMZ configuramos un servidor web permitiendo las conexiones tanto desde la red interna como de la externa , mientras que las conexiones que parten de la DMZ solo puedan salir a la red interna.
+
 
 
 ### Y las pruebas de estilo de codificación ⌨️
