@@ -40,15 +40,11 @@ El VyOS2 será el encargado de manejar el webproxy que se aplica a la red 192.16
 
 En el apartado de la DMZ configuramos un servidor web permitiendo las conexiones tanto desde la red interna como de la externa , mientras que las conexiones que parten de la DMZ solo puedan salir a la red interna.
 
+## Autores ✒️
 
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
+* **Nicolas Mendigaño** 
+* **Esteban Ruiz** 
+* **Jeison Jara** 
 
 ## Despliegue 📦
 
@@ -74,14 +70,7 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 
 Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
 
-## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
 ## Licencia 📄
 
